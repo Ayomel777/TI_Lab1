@@ -44,6 +44,8 @@ func (a *App) Encrypt(plaintext, key string) string {
 			if index < len(text) {
 				matrix[i][j] = textRunes[index]
 				index++
+			} else {
+				matrix[i][j] = 'X'
 			}
 		}
 	}
@@ -96,7 +98,7 @@ func (a *App) Decrypt(text, keyword string) string {
 		}
 	}
 
-	return result.String()
+	return strings.TrimRight(result.String(), "X")
 }
 
 func getColOrder(key string) []int {
