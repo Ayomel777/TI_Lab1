@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.app {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #4a148c;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.keyword {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #7c4dff;
+    border-radius: 12px;
+    background: #f3e5f5;
+    color: #4a148c;
+    letter-spacing: 4px;
+}
+
+.keyword:focus {
+    outline: none;
+    border-color: #ff6d00;
+    background: #fff3e0;
+}
+
+.textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #b39ddb;
+    border-radius: 12px;
+    resize: vertical;
+    font-family: 'Courier New', monospace;
+    background: #fafafa;
+    color: #1a237e;
+    font-weight: 500;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #7c4dff;
+    background: white;
+    box-shadow: 0 0 15px rgba(124,77,255,0.2);
+}
+
+.output {
+    background: #e8eaf6;
+    border-color: #5c6bc0;
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.btn {
+    padding: 14px 8px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.encrypt { background: #00c853; }
+.decrypt { background: #2979ff; }
+.file { background: #ff6d00; }
+.save { background: #aa00ff; }
+.clear { background: #d50000; }
+
+@media (max-width: 600px) {
+    .app { margin: 20px; padding: 20px; }
+    .buttons { grid-template-columns: repeat(3, 1fr); }
+    .keyword { font-size: 20px; }
+}
